@@ -23,12 +23,16 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
+            this.txtBox = new FastColoredTextBoxNS.FastColoredTextBox();
             this.menuStripMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -72,11 +76,43 @@
             this.toolStripMain.TabIndex = 2;
             this.toolStripMain.Text = "toolStrip1";
             // 
+            // txtBox
+            // 
+            this.txtBox.AutoCompleteBracketsList = new char[] {
+        '(',
+        ')',
+        '{',
+        '}',
+        '[',
+        ']',
+        '\"',
+        '\"',
+        '\'',
+        '\''};
+            this.txtBox.AutoScrollMinSize = new System.Drawing.Size(27, 14);
+            this.txtBox.BackBrush = null;
+            this.txtBox.CharHeight = 14;
+            this.txtBox.CharWidth = 8;
+            this.txtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBox.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.txtBox.IsReplaceMode = false;
+            this.txtBox.Location = new System.Drawing.Point(0, 49);
+            this.txtBox.Name = "txtBox";
+            this.txtBox.Paddings = new System.Windows.Forms.Padding(0);
+            this.txtBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.txtBox.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("txtBox.ServiceColors")));
+            this.txtBox.Size = new System.Drawing.Size(800, 379);
+            this.txtBox.TabIndex = 3;
+            this.txtBox.Zoom = 100;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBox);
             this.Controls.Add(this.toolStripMain);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStripMain);
@@ -85,6 +121,7 @@
             this.Text = "Form1";
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,6 +134,7 @@
         private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStrip toolStripMain;
+        private FastColoredTextBoxNS.FastColoredTextBox txtBox;
     }
 }
 

@@ -13,5 +13,9 @@ namespace JavaEditor {
         public FrmMain() {
             InitializeComponent();
         }
+
+        private void Form_Load(object sender, EventArgs e) {
+            // TODO
+        }
     }
 }
