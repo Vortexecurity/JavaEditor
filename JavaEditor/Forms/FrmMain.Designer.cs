@@ -31,7 +31,9 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.txtBox = new FastColoredTextBoxNS.FastColoredTextBox();
+            this.runCodeBtn = new System.Windows.Forms.ToolStripButton();
             this.menuStripMain.SuspendLayout();
+            this.toolStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +71,8 @@
             // 
             // toolStripMain
             // 
+            this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.runCodeBtn});
             this.toolStripMain.Location = new System.Drawing.Point(0, 24);
             this.toolStripMain.Name = "toolStripMain";
             this.toolStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -96,7 +100,6 @@
             this.txtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.txtBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBox.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.txtBox.IsReplaceMode = false;
             this.txtBox.Location = new System.Drawing.Point(0, 49);
             this.txtBox.Name = "txtBox";
@@ -106,6 +109,17 @@
             this.txtBox.Size = new System.Drawing.Size(800, 379);
             this.txtBox.TabIndex = 3;
             this.txtBox.Zoom = 100;
+            this.txtBox.TextChangedDelayed += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.txtBox_TextChangedDelayed);
+            // 
+            // runCodeBtn
+            // 
+            this.runCodeBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.runCodeBtn.Image = ((System.Drawing.Image)(resources.GetObject("runCodeBtn.Image")));
+            this.runCodeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.runCodeBtn.Name = "runCodeBtn";
+            this.runCodeBtn.Size = new System.Drawing.Size(23, 22);
+            this.runCodeBtn.Text = "toolStripButton1";
+            this.runCodeBtn.Click += new System.EventHandler(this.runCodeBtn_Click);
             // 
             // FrmMain
             // 
@@ -121,6 +135,8 @@
             this.Text = "Form1";
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
+            this.toolStripMain.ResumeLayout(false);
+            this.toolStripMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,6 +151,7 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStrip toolStripMain;
         private FastColoredTextBoxNS.FastColoredTextBox txtBox;
+        private System.Windows.Forms.ToolStripButton runCodeBtn;
     }
 }
 
